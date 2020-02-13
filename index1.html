@@ -2,17 +2,37 @@
 <html>
   <style type="text/css">
     body {
-      position: relative;
-      width: 1440px;
-      height: 1024px;
       background: #1F2437;
     }
     #page1 {
       display:block;
     }
-    #page2, #page3 {
+    #page2, #page3, #page4, #page5 {
       display:none;
     }
+
+    .youtubeposition {
+        overflow: hidden;
+        position: absolute;
+        left:10%;
+        top:5%;
+        width:80%;
+    }
+
+    .youtubeposition::after {
+        padding-top: 56.25%;
+        display: block;
+        content: '';
+    }
+
+    .youtubeposition iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .text1 {
       position: absolute;
       width: 398px;
@@ -208,6 +228,25 @@
 
       color: #FFFFFF;
     }
+    .text12 {
+      /* Next */
+      position: absolute;
+      left: 24.7%;
+      right: 24.1%;
+      top: 16.07%;
+      bottom: 17.86%;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 37px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
 
     .radio1 {
       /* Ellipse 1 */
@@ -292,6 +331,14 @@
       bottom: 54.2%;
       display:none;
     }
+    .img6 {
+      /* Vector */
+      position: absolute;
+      left: 38.68%;
+      right: 58.82%;
+      top: 40.62%;
+      bottom: 54.2%;
+    }
 
     .button1 {
       /* Group 6 */
@@ -313,6 +360,27 @@
       top: 739px;
       background: #636363;
       border-radius: 8px;
+    }
+    .button3 {
+      /* Group 6 */
+      position: absolute;
+      width: 166px;
+      height: 56px;
+      left: 638px;
+      top: 739px;
+      background: #FFC107;
+      border-radius: 8px;
+    }
+    .button4 {
+      /* Group 6 */
+      position: absolute;
+      width: 166px;
+      height: 56px;
+      left: 80%;
+      top: 90%;
+      background: #FFC107;
+      border-radius: 8px;
+      display:none;
     }
 
     .rectangle1 {
@@ -340,36 +408,134 @@
       <input class="radio1" onclick="radio1()" type="radio" id="current" name="material" value="Current">
       <div class="img1"><img src='assets/Current.png'></div>
       <div class="text7">Current</div>
-      <input class="radio2" type="radio" id="metal" name="material" value="Metal">
+      <input class="radio2" onclick="radio2()" type="radio" id="metal" name="material" value="Metal">
       <div class="img2"><img src="assets/Metal.png"></div>
       <div class="text8">Metal</div>
-      <input class="radio3" type="radio" id="chemical_solution" name="material" value="Chemical Solution">
+      <input class="radio3" onclick="radio3()" type="radio" id="chemical_solution" name="material" value="Chemical Solution">
       <div class="img3"><img src="assets/Chemical Solution.png"></div>
       <div class="text9">Chemical Solution</div>
-      <input class="radio4" type="radio" id="cotton" name="material" value="Cotton">
+      <input class="radio4" onclick="radio4()" type="radio" id="cotton" name="material" value="Cotton">
       <div class="img4"><img src="assets/Cotton.png"></div>
       <div class="text10">Cotton</div>
-      <button class="button2" onclick="myFunction2()"><div class="text6">Done</div></button>
+      <button class="button2" id="button2" onclick="myFunction2()"><div class="text6" id="text6">Done</div></button>
     </div>
     <div id="page3">
-      <div class="text4">What do you think the battery is made of?</div>
-      <div class="text5">Please select:</div>
-      <button class="button1" onclick="myFunction1()"><div class="text3">START</div></button>
+      <div class="text4">Correct!</div>
+      <div class="rectangle1"><div class="img6"><img src="assets/Chemical Solution.png"></div></div><div class="text11">Battery</div>
+      <button class="button3" onclick="myFunction3()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page4">
+      <div class="youtubeposition"><div id="player"></div></div>
+      <button class="button4" id="button4" onclick="myFunction4()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page5">
+      <button class="button4" onclick="myFunction4()"><div class="text12">Next</div></button>
     </div>
     <script>
       function myFunction1() {
         document.getElementById("page1").style.display = "none";
         document.getElementById("page2").style.display = "block";
+        document.getElementById("button2").disabled = true;
       }
       function myFunction2() {
         document.getElementById("page2").style.display = "none";
         document.getElementById("page3").style.display = "block";
       }
+      function myFunction3() {
+        document.getElementById("page3").style.display = "none";
+        document.getElementById("page4").style.display = "block";
+      }
+      function myFunction4() {
+        document.getElementById("page4").style.display = "none";
+        document.getElementById("page5").style.display = "block";
+      }
 
       function radio1() {
         document.getElementById("img5").style.display = "block";
         document.getElementById("img5").innerHTML = "<img src='assets/Current.png'>";
+        document.getElementById('button2').style.backgroundColor = "#FFC107";
+        document.getElementById('text6').style.color = "#FFFFFF";
+        document.getElementById("button2").disabled = false;
       }
+      function radio2() {
+        document.getElementById("img5").style.display = "block";
+        document.getElementById("img5").innerHTML = "<img src='assets/Metal.png'>";
+        document.getElementById('button2').style.backgroundColor = "#FFC107";
+        document.getElementById('text6').style.color = "#FFFFFF";
+        document.getElementById("button2").disabled = false;
+      }
+      function radio3() {
+        document.getElementById("img5").style.display = "block";
+        document.getElementById("img5").innerHTML = "<img src='assets/Chemical Solution.png'>";
+        document.getElementById('button2').style.backgroundColor = "#FFC107";
+        document.getElementById('text6').style.color = "#FFFFFF";
+        document.getElementById("button2").disabled = false;
+      }
+      function radio4() {
+        document.getElementById("img5").style.display = "block";
+        document.getElementById("img5").innerHTML = "<img src='assets/Cotton.png'>";
+        document.getElementById('button2').style.backgroundColor = "#FFC107";
+        document.getElementById('text6').style.color = "#FFFFFF";
+        document.getElementById("button2").disabled = false;
+      }
+
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'lil-Xqhugx8',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        //event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          //setTimeout(pauseVideo, 6000);
+          //done = true;
+        }
+        if(event.data === 0) {
+            document.getElementById("button4").style.display = "block";
+        }
+      }
+      function pauseVideo() {
+        player.pauseVideo();
+        document.getElementById("quiz1").style.display = "block";
+      }
+      new YT.Player('player', {
+      height: vidPlayerHeight,
+      width: vidPlayerWidth,
+      videoId: vid,
+            //  wmode: transparent  makes HTML goes on top of Flash
+            //  fs: disable full screen
+      playerVars: {'autoplay': 0, 'wmode': 'transparent', 'fs': 0, 'controls':1, 'rel':0, 'modestbranding':1, 'showinfo':0},
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange,
+        'onError': onPlayerError,
+      }
+      });
     </script>
  </body>
 </html>
