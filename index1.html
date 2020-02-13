@@ -7,7 +7,7 @@
     #page1 {
       display:block;
     }
-    #page2, #page3, #page4, #page5 {
+    #page2, #page3, #page31, #page4, #page5, #page6 {
       display:none;
     }
 
@@ -344,6 +344,14 @@
       left: 735px;
       top: 395px;
     }
+    .img8 {
+      /* Group 2 */
+      position: absolute;
+      width: 217px;
+      height: 61px;
+      left: 735px;
+      top: 469px;
+    }
 
     .button1 {
       /* Group 6 */
@@ -414,6 +422,12 @@
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
+    #div2 {
+      width: 350px;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
   </style>
   <body>
     <div id="page1">
@@ -444,6 +458,11 @@
       <div class="rectangle1"><div class="img6"><img src="assets/Chemical Solution.png"></div></div><div class="text11">Battery</div>
       <button class="button3" onclick="myFunction3()"><div class="text12">Next</div></button>
     </div>
+    <div id="page31">
+      <div class="text4">Incorrect</div>
+      <div class="rectangle1"><div class="img6"><img src="assets/Chemical Solution.png"></div></div><div class="text11">Battery</div>
+      <button class="button3" onclick="myFunction3()"><div class="text12">Next</div></button>
+    </div>
     <div id="page4">
       <div class="youtubeposition"><div id="player"></div></div>
       <button class="button4" id="button4" onclick="myFunction4()"><div class="text12">Next</div></button>
@@ -452,12 +471,14 @@
       <div class="text4">What is moving in the Li-ion battery & wire?</div>
       <div class="text5">Please drag the items into the two blank slots in the left:</div>
       <div class="diagram"><img src="assets/dragdrop.png"></div>
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <div class="img7"><img id="drag1" src="assets/curr.png" draggable="true" ondragstart="drag(event)"></div>
-      <!-- <div class="img7"><img src="assets/curr.png" draggable="true" ondragstart="drag(event)"></div> -->
+      <div id="div1" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id="div2" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="img7"><img src="assets/curr.png" draggable="true" ondragstart="drag(event)" id="drag1"></div>
+      <div class="img8"><img src="assets/elec.png" draggable = "true" ondragstart="drag(event)" id="drag2"></div>
       <button class="button2" id="button5" onclick="myFunction5()"><div class="text6" id="text12">Done</div></button>
     </div>
     <script>
+      var flag = 1;
       function myFunction1() {
         document.getElementById("page1").style.display = "none";
         document.getElementById("page2").style.display = "block";
@@ -465,17 +486,33 @@
       }
       function myFunction2() {
         document.getElementById("page2").style.display = "none";
-        document.getElementById("page3").style.display = "block";
+        var radios = document.getElementsByName('material');
+        if (radios[0].checked) {
+          document.getElementById("page3").style.display = "block";
+        }
+        else {
+          //we can later make it personalized for each response
+          document.getElementById("page31").style.display = "block";
+        }
       }
       function myFunction3() {
         document.getElementById("page3").style.display = "none";
+        document.getElementById("page31").style.display = "none";
         document.getElementById("page4").style.display = "block";
+        flag=0;
       }
       function myFunction4() {
         document.getElementById("page4").style.display = "none";
         document.getElementById("page5").style.display = "block";
         document.getElementById("button5").disabled = true;
+        document.getElementById("button4").style.display = "none";
       }
+      function myFunction5() {
+        document.getElementById("page5").style.display = "none";
+        document.getElementById("page4").style.display = "block";
+        flag=0;
+      }
+
 
       function radio1() {
         document.getElementById("img5").style.display = "block";
@@ -511,17 +548,39 @@
       }
 
       function drag(ev) {
-        ev.dataTransfer.setData("img", ev.target.id);
+        ev.dataTransfer.setData("text", ev.target.id);
       }
 
       function drop(ev) {
+        console.log(ev.target.childNodes);
+        console.log(ev.target.childNodes.length);
         ev.preventDefault();
-        var data = ev.dataTransfer.getData("img");
-        ev.target.appendChild(document.getElementById(data));
+        var data = ev.dataTransfer.getData("text");
+        var el = ev.target;
+        if (ev.target.childNodes.length>=1) {
+          ev.target.childNodes[0].remove();
+          el.appendChild(document.getElementById(data).cloneNode(true));
+          console.log("remove");
+          //ev.target.removeChild(ev.target.childNodes[0]);
+        }
+        else {
+          el.appendChild(document.getElementById(data).cloneNode(true));
+        }
+        //ev.target.appendChild(document.getElementById(data));
+        if (document.getElementById('div1').innerHTML != "" && document.getElementById('div2').innerHTML != "") {
+          document.getElementById("button5").disabled = false;
+          document.getElementById('button5').style.backgroundColor = "#FFC107";
+          document.getElementById('text12').style.color = "#FFFFFF";
+        }
+
       }
 
       // 1. Youtube video starts here
       // 2. This code loads the IFrame Player API code asynchronously.
+      var videoIDs = [
+        'lil-Xqhugx8',
+        'uFLvcRcBy30'
+    ];
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
@@ -530,12 +589,11 @@
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-      var player;
+      var player, currentVideoId = 0;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'lil-Xqhugx8',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -545,39 +603,43 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        //event.target.playVideo();
+        //event.target.loadVideoById(videoIDs[currentVideoId]);
       }
 
       // 5. The API calls this function when the player's state changes.
       //    The function indicates that when playing a video (state=1),
       //    the player should play for six seconds and then stop.
-      var done = false;
+      //var done = false;
       function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
+        //if (event.data == YT.PlayerState.PLAYING && !done) {
           //setTimeout(pauseVideo, 6000);
           //done = true;
-        }
+        //}
         if(event.data === 0) {
+          if (currentVideoId==1) {
             document.getElementById("button4").style.display = "block";
+          }
+          if (currentVideoId==2) {
+            document.getElementById("button4").style.display = "block";
+          }
+          if (event.data == YT.PlayerState.ENDED ) {
+            // currentVideoId++;
+            // if (currentVideoId < videoIDs.length) {
+            //     player.loadVideoById(videoIDs[currentVideoId]);
+            // }
+          }
         }
       }
-      function pauseVideo() {
-        player.pauseVideo();
-        document.getElementById("quiz1").style.display = "block";
-      }
-      // new YT.Player('player', {
-      // height: vidPlayerHeight,
-      // width: vidPlayerWidth,
-      // videoId: vid,
-      //       //  wmode: transparent  makes HTML goes on top of Flash
-      //       //  fs: disable full screen
-      // playerVars: {'autoplay': 0, 'wmode': 'transparent', 'fs': 0, 'controls':1, 'rel':0, 'modestbranding':1, 'showinfo':0},
-      // events: {
-      //   'onReady': onPlayerReady,
-      //   'onStateChange': onPlayerStateChange,
-      //   'onError': onPlayerError,
-      // }
-      // });
+      setInterval(function() {
+          if(flag==0) {
+              // Button is hidden
+              if (currentVideoId < videoIDs.length) {
+                player.loadVideoById(videoIDs[currentVideoId]);
+              }
+              currentVideoId++;
+              flag=1;
+          }
+      }, 1000);
     </script>
  </body>
 </html>
