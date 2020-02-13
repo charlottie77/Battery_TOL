@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <style type="text/css">
+    body {
+      position: relative;
+      width: 1440px;
+      height: 1024px;
+      background: #1F2437;
+    }
+    #page1 {
+      display:block;
+    }
+    #page2, #page3 {
+      display:none;
+    }
+    .text1 {
+      position: absolute;
+      width: 398px;
+      height: 59px;
+      left: 521px;
+      top: 336px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 59px;
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+    .text2 {
+      /* Phone Battery */
+      position: absolute;
+      width: 365px;
+      height: 59px;
+      left: 538px;
+      top: 395px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 59px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+    .text3 {
+      /* START */
+
+
+      position: absolute;
+      left: 21.08%;
+      right: 21.08%;
+      top: 16.07%;
+      bottom: 17.86%;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 37px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+    .text4 {
+      /* What do you think the battery is made of? */
+      position: absolute;
+      width: 1070px;
+      height: 59px;
+      left: 185px;
+      top: 160px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 59px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+    .text5 {
+      /* Please select: */
+      position: absolute;
+      width: 174px;
+      height: 32px;
+      left: 737px;
+      top: 304px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 32px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+    .text6 {
+      /* Done */
+      position: absolute;
+      left: 24.7%;
+      right: 24.1%;
+      top: 16.07%;
+      bottom: 17.86%;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 37px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #BDBDBD;
+    }
+    .text7 {
+      /* Current */
+      position: absolute;
+      width: 131px;
+      height: 41px;
+      left: 815px;
+      top: 349px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 41px;
+
+      color: #FFFFFF;
+    }
+    .text8 {
+      /* Metal */
+      position: absolute;
+      width: 96px;
+      height: 41px;
+      left: 815px;
+      top: 422px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 41px;
+
+      color: #FFFFFF;
+    }
+    .text9 {
+      /* Chemical Solution */
+      position: absolute;
+      width: 312px;
+      height: 41px;
+      left: 815px;
+      top: 495px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 41px;
+
+      color: #FFFFFF;
+    }
+    .text10 {
+      /* Cotton */
+      position: absolute;
+      width: 116px;
+      height: 41px;
+      left: 815px;
+      top: 568px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 41px;
+
+      color: #FFFFFF;
+    }
+    .text11 {
+      /* Battery */
+      position: absolute;
+      width: 143.45px;
+      height: 35.64px;
+      left: 503px;
+      top: 491.54px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+
+    .radio1 {
+      /* Ellipse 1 */
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 735px;
+      top: 353px;
+
+      border: 3px solid #FFFFFF;
+      box-sizing: border-box;
+    }
+    .radio2 {
+      /* Ellipse 1 */
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 735px;
+      top: 426px;
+
+      border: 3px solid #FFFFFF;
+      box-sizing: border-box;
+    }
+    .radio3 {
+      /* Ellipse 1 */
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 735px;
+      top: 500px;
+
+      border: 3px solid #FFFFFF;
+      box-sizing: border-box;
+    }
+    .radio4 {
+      /* Ellipse 1 */
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 735px;
+      top: 573px;
+
+      border: 3px solid #FFFFFF;
+      box-sizing: border-box;
+    }
+
+    .img1 {
+      /* Vector */
+      position: absolute;
+      left: 54.31%;
+      right: 43.96%;
+      top: 34.28%;
+      bottom: 62.11%;
+    }
+    .img2 {
+      position: absolute;
+      left: 54.31%;
+      right: 43.96%;
+      top: 41.41%;
+      bottom: 54.93%;
+    }
+    .img3 {
+      position: absolute;
+      left: 54.31%;
+      right: 43.96%;
+      top: 48.54%;
+      bottom: 47.8%;
+    }
+    .img4 {
+      position: absolute;
+      left: 54.31%;
+      right: 43.96%;
+      top: 55.66%;
+      bottom: 40.67%;
+    }
+    .img5 {
+      /* Vector */
+      position: absolute;
+      left: 38.68%;
+      right: 58.82%;
+      top: 40.62%;
+      bottom: 54.2%;
+      display:none;
+    }
+
+    .button1 {
+      /* Group 6 */
+      position: absolute;
+      width: 166px;
+      height: 56px;
+      left: 637px;
+      top: 538px;
+      background: #4E53C2;
+      border-radius: 8px;
+      border-color: #1F2437;
+    }
+    .button2 {
+      /* Group 6 */
+      position: absolute;
+      width: 166px;
+      height: 56px;
+      left: 638px;
+      top: 739px;
+      background: #636363;
+      border-radius: 8px;
+    }
+
+    .rectangle1 {
+      /* Rectangle 2 */
+      position: absolute;
+      width: 263px;
+      height: 338px;
+      left: 443px;
+      top: 310px;
+
+      background: #4E53C2;
+    }
+
+  </style>
+  <body>
+    <div id="page1">
+      <div class="text1">Let’s learn about</div>
+      <div class="text2">Phone Battery</div>
+      <button class="button1" onclick="myFunction1()"><div class="text3">START</div></button>
+    </div>
+    <div id="page2">
+      <div class="text4">What do you think the battery is made of?</div>
+      <div class="rectangle1"><div class="img5" id="img5"><img src="assets/Metal.png"></div></div><div class="text11">Battery</div>
+      <div class="text5">Please select:</div>
+      <input class="radio1" onclick="radio1()" type="radio" id="current" name="material" value="Current">
+      <div class="img1"><img src='assets/Current.png'></div>
+      <div class="text7">Current</div>
+      <input class="radio2" type="radio" id="metal" name="material" value="Metal">
+      <div class="img2"><img src="assets/Metal.png"></div>
+      <div class="text8">Metal</div>
+      <input class="radio3" type="radio" id="chemical_solution" name="material" value="Chemical Solution">
+      <div class="img3"><img src="assets/Chemical Solution.png"></div>
+      <div class="text9">Chemical Solution</div>
+      <input class="radio4" type="radio" id="cotton" name="material" value="Cotton">
+      <div class="img4"><img src="assets/Cotton.png"></div>
+      <div class="text10">Cotton</div>
+      <button class="button2" onclick="myFunction2()"><div class="text6">Done</div></button>
+    </div>
+    <div id="page3">
+      <div class="text4">What do you think the battery is made of?</div>
+      <div class="text5">Please select:</div>
+      <button class="button1" onclick="myFunction1()"><div class="text3">START</div></button>
+    </div>
+    <script>
+      function myFunction1() {
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").style.display = "block";
+      }
+      function myFunction2() {
+        document.getElementById("page2").style.display = "none";
+        document.getElementById("page3").style.display = "block";
+      }
+
+      function radio1() {
+        document.getElementById("img5").style.display = "block";
+        document.getElementById("img5").innerHTML = "<img src='assets/Current.png'>";
+      }
+    </script>
+ </body>
+</html>
