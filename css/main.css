@@ -20,6 +20,49 @@ body {
     margin-top: 90px;
 }
 
+#page2 {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6%;
+}
+
+.p2-2{
+  display: flex;
+  margin-top: 90px;
+}
+
+.p22-i {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.p22-i input {
+  margin-right: 12px;
+}
+
+.text-p2{
+  padding-left: 14px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 41px;
+  color: #FFFFFF;
+}
+
+.p22-2{
+  display: flex;
+  margin-left: 30px;
+  flex-direction: column;
+}
+
+.small-icon {
+  height: 38px;
+  width: auto;
+}
+
   #page2, #page3, #page31, #page4, #page5, #page6 {
     display:none;
   }
@@ -70,18 +113,6 @@ body {
 
     color: #FFFFFF;
   }
-  .text3 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 37px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #FFFFFF;
-  }
   .text4 {
     /* What do you think the battery is made of? */
     font-family: Montserrat;
@@ -101,8 +132,8 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
-
     color: #FFFFFF;
+    margin-bottom: 14px;
   }
   .text6 {
     font-family: Montserrat;
@@ -114,43 +145,7 @@ body {
     text-align: center;
     color: #BDBDBD;
   }
-  .text7 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 41px;
-
-    color: #FFFFFF;
-  }
-  .text8 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 41px;
-
-    color: #FFFFFF;
-  }
-  .text9 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 41px;
-
-    color: #FFFFFF;
-  }
-  .text10 {
-    /* Cotton */
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 34px;
-    line-height: 41px;
-
-    color: #FFFFFF;
-  }
+  
   .text11 {
     /* Battery */
     font-family: Montserrat;
@@ -210,7 +205,8 @@ body {
   }
   .img5 {
     /* Vector */
-   
+    height: 38px;
+    width: 38px;
     display:none;
   }
   .img6 {
@@ -240,15 +236,29 @@ body {
     line-height: 37px;
     color: #fff;
     /* identical to box height */
-
-text-align: center;
+    text-align: center;
   }
+
+  .action-button {
+    margin-top: 90px;
+  }
+
   .button2 {
     /* Group 6 */
     
     background: #636363;
     border-radius: 8px;
+    padding: 4px 40px 4px 40px;
+    border-width: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #BDBDBD;
   }
+
   .button3 {
     /* Group 6 */
     
@@ -268,6 +278,18 @@ text-align: center;
     width: 263px;
     height: 338px;
     background: #4E53C2;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+  }
+  .rec1-1 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .diagram {
