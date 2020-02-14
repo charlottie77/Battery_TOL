@@ -1,0 +1,293 @@
+body {
+    background: #1F2437;
+    height: 100%;
+}
+
+#page1 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.p1-1, .p1-2, .p1-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1-3 {
+    margin-top: 90px;
+}
+
+  #page2, #page3, #page31, #page4, #page5, #page6 {
+    display:none;
+  }
+
+  .youtubeposition {
+      overflow: hidden;
+      position: absolute;
+      left:10%;
+      top:5%;
+      width:80%;
+  }
+
+  .youtubeposition::after {
+      padding-top: 56.25%;
+      display: block;
+      content: '';
+  }
+
+  .youtubeposition iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  
+
+  .text1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .text2 {
+    /* Phone Battery */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  .text3 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  .text4 {
+    /* What do you think the battery is made of? */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  .text5 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+  }
+  .text6 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    text-align: center;
+    color: #BDBDBD;
+  }
+  .text7 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+  }
+  .text8 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+  }
+  .text9 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+  }
+  .text10 {
+    /* Cotton */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+
+    color: #FFFFFF;
+  }
+  .text11 {
+    /* Battery */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #FFFFFF;
+  }
+  .text12 {
+    /* Next */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .radio1 {
+    /* Ellipse 1 */
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+  .radio2 {
+    /* Ellipse 1 */
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+  .radio3 {
+    /* Ellipse 1 */
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+  .radio4 {
+    /* Ellipse 1 */
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+  }
+
+  .img1 {
+    /* Vector */
+    
+  }
+  .img2 {
+    
+  }
+  .img3 {
+    
+  }
+  .img4 {
+    
+  }
+  .img5 {
+    /* Vector */
+   
+    display:none;
+  }
+  .img6 {
+    /* Vector */
+   
+  }
+  .img7 {
+    /* Group 2 */
+    
+  }
+  .img8 {
+    /* Group 2 */
+    
+  }
+
+  .button1 {
+    /* Group 6 */
+    width: 166px;
+    height: 56px;
+    background: #4E53C2;
+    border-radius: 8px;
+    border-color: #1F2437;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: #fff;
+    /* identical to box height */
+
+text-align: center;
+  }
+  .button2 {
+    /* Group 6 */
+    
+    background: #636363;
+    border-radius: 8px;
+  }
+  .button3 {
+    /* Group 6 */
+    
+    background: #FFC107;
+    border-radius: 8px;
+  }
+  .button4 {
+    /* Group 6 */
+    
+    background: #FFC107;
+    border-radius: 8px;
+    display:none;
+  }
+
+  .rectangle1 {
+    /* Rectangle 2 */
+    width: 263px;
+    height: 338px;
+    background: #4E53C2;
+  }
+
+  .diagram {
+    /* Group 8 */
+    position: absolute;
+    width: 457px;
+    height: 371.5px;
+    left: 242px;
+    top: 309px;
+  }
+
+  #div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
+  #div2 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+  }
