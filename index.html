@@ -56,42 +56,65 @@
 
     <div id="page3">
       <div class="text4">Correct!</div>
-      <div class="rectangle1">
-        <div class="rec1-1">
-          <img id="img6"  src="assets/Chemical Solution.png">
-          <div class="text11">Battery</div>
+      <div class="p3-1">
+        <div class="rectangle1">
+          <div class="rec1-1">
+            <img id="img6"  src="assets/Chemical Solution.png">
+            <div class="text11">Battery</div>
+          </div>
+        </div>
+        <div class="pp31-1">
+          <label class="p3a-t-1" >Yes! Battery is made by</label>
+          <label class="p3a-t-2">Chemical Solution</label>
         </div>
       </div>
       <button class="button3" onclick="myFunction3()"><div class="text12">Next</div></button>
     </div>
     <div id="page31">
       <div class="text4">Incorrect</div>
-      <div class="rectangle1">
-        <div class="rec1-1">
-          <img id="img6"  src="assets/Chemical Solution.png">
-          <div class="text11">Battery</div>
+      <div class="p31-1">
+        <div class="rectangle1">
+          <div class="rec1-1">
+            <img id="img6"  src="assets/Chemical Solution.png">
+            <div class="text11">Battery</div>
+          </div>
+        </div>
+        <div class="p311-1">
+          <label class="p3b-t-1">Actually, battery is made by</label>
+          <label class="p3b-t-2">Chemical Solution</label>
         </div>
       </div>
       <button class="button3" onclick="myFunction3()"><div class="text12">Next</div></button>
     </div>
     <div id="page4">
       <div class="youtubeposition"><div id="player"></div></div>
-      <button class="button4" id="button4" onclick="myFunction4()"><div class="text12">Next</div></button>
+      <div>
+        <button class="button4" id="button4" onclick="myFunction4()">Next</button>
+      </div>
     </div>
     <div id="page5">
-      <div class="text4">What is moving in the Li-ion battery & wire?</div>
-      <div class="text5">Please drag the items into the two blank slots in the left:</div>
-      <div class="diagram"><img src="assets/dragdrop.png"></div>
-      <div id="dragdrop">
-        <div id="div1" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="div2" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="text4a">What is moving in the Li-ion battery & wire?</div>
+      <div class="text5">When the phone is using</div>
+      <div class="p5-1">
+        <div class="p51-1">
+          <div class="diagram">
+            <div id="dragdrop">
+              <div id="div1" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+              <div id="div2" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+          </div>
+          <button class="button-clean" id="button6" onclick="myFunction6()">Clean Slot</button><br>
+        </div>
+        <div class="p51-2">
+          <p>Please drag the items into the two blank slots in the left:</p>
+          <div>
+            <div class="img7"><img src="assets/curr.png" draggable="true" ondragstart="drag(event)" id="drag1"></div>
+            <div class="img8"><img src="assets/elec.png" draggable = "true" ondragstart="drag(event)" id="drag2"></div>
+            <div class="img9"><img src="assets/lith.png" draggable = "true" ondragstart="drag(event)" id="drag3"></div>
+            <div class="img10"><img src="assets/water.png" draggable = "true" ondragstart="drag(event)" id="drag4"></div>
+          </div>
+        </div>
       </div>
-      <div class="img7"><img src="assets/curr.png" draggable="true" ondragstart="drag(event)" id="drag1"></div>
-      <div class="img8"><img src="assets/elec.png" draggable = "true" ondragstart="drag(event)" id="drag2"></div>
-      <div class="img9"><img src="assets/lith.png" draggable = "true" ondragstart="drag(event)" id="drag3"></div>
-      <div class="img10"><img src="assets/water.png" draggable = "true" ondragstart="drag(event)" id="drag4"></div>
-      <!-- yuqing edit the class of clean slots button -->
-      <button class="button2" id="button6" onclick="myFunction6()"><div class="text6">Clean Slots</div></button><br>
       <div id="buttonreset">
         <button class="button2" id="button5" onclick="myFunction5()"><div class="text6" id="text12">Done</div></button>
       </div>
@@ -99,25 +122,22 @@
     <div id="page6">
       <div class="text4">Correct</div>
       <div class="text5">Please drag the items into the two blank slots in the left:</div>
-      <div class="diagram"><img src="assets/Correct.png"></div>
+      <div class="diagram-answer"><img src="assets/Correct.png"></div>
       <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
     </div>
     <div id="page61">
       <div class="text4">Not quite right</div>
-      <div class="text5">Please drag the items into the two blank slots in the left:</div>
-      <div class="diagram"><img src="assets/Liright.png"></div>
+      <div class="diagram-answer"><img src="assets/Liright.png"></div>
       <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
     </div>
     <div id="page62">
       <div class="text4">Not quite right</div>
-      <div class="text5">Please drag the items into the two blank slots in the left:</div>
-      <div class="diagram"><img src="assets/Eright.png"></div>
+      <div class="diagram-answer"><img src="assets/Eright.png"></div>
       <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
     </div>
     <div id="page63">
       <div class="text4">Incorrect</div>
-      <div class="text5">Please drag the items into the two blank slots in the left:</div>
-      <div class="diagram"><img src="assets/wrong.png"></div>
+      <div class="diagram-answer"><img src="assets/wrong.png"></div>
       <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
     </div>
     <div id="page7">
@@ -173,24 +193,24 @@
         document.getElementById("page2").style.display = "none";
         var radios = document.getElementsByName('material');
         if (radios[2].checked) {
-          document.getElementById("page3").style.display = "block";
+          document.getElementById("page3").style.display = "flex";
         }
         else {
           //we can later make it personalized for each response
-          document.getElementById("page31").style.display = "block";
+          document.getElementById("page31").style.display = "flex";
         }
       }
       function myFunction3() {
         document.getElementById("page3").style.display = "none";
         document.getElementById("page31").style.display = "none";
-        document.getElementById("page4").style.display = "block";
+        document.getElementById("page4").style.display = "flex";
         flag=0;
       }
       function myFunction4() {
         document.getElementById("page4").style.display = "none";
         if(counter==0)
         {
-          document.getElementById("page5").style.display = "block";
+          document.getElementById("page5").style.display = "flex";
           document.getElementById("button5").disabled = true;
           document.getElementById("button4").style.display = "none";
           html1 = document.getElementById('dragdrop').innerHTML;
@@ -198,12 +218,12 @@
         }
         else if(counter==1)
         {
-          document.getElementById("page7").style.display = "block";
+          document.getElementById("page7").style.display = "flex";
           document.getElementById("button7").disabled = true;
           document.getElementById("button4").style.display = "none";
         }
         else {
-          document.getElementById("page9").style.display = "block";
+          document.getElementById("page9").style.display = "flex";
         }
         counter=counter+1;
       }
@@ -211,18 +231,18 @@
         document.getElementById("page5").style.display = "none";
         if (document.getElementById("div1").childNodes[0].getAttribute("src")=="assets/elec.png" && document.getElementById("div2").childNodes[0].getAttribute("src")=="assets/lith.png")
         {
-          document.getElementById("page6").style.display = "block";
+          document.getElementById("page6").style.display = "flex";
         }
         else if (document.getElementById("div2").childNodes[0].getAttribute("src")=="assets/lith.png")
         {
-          document.getElementById("page61").style.display = "block";
+          document.getElementById("page61").style.display = "flex";
         }
         else if (document.getElementById("div1").childNodes[0].getAttribute("src")=="assets/elec.png")
         {
-          document.getElementById("page62").style.display = "block";
+          document.getElementById("page62").style.display = "flex";
         }
         else {
-          document.getElementById("page63").style.display = "block";
+          document.getElementById("page63").style.display = "flex";
         }
       }
       function myFunction6() {
@@ -236,16 +256,16 @@
         document.getElementById("page61").style.display = "none";
         document.getElementById("page62").style.display = "none";
         document.getElementById("page63").style.display = "none";
-        document.getElementById("page4").style.display = "block";
+        document.getElementById("page4").style.display = "flex";
         flag=0;
       }
       function myFunction8() {
         document.getElementById("page7").style.display = "none";
-        document.getElementById("page8").style.display = "block";
+        document.getElementById("page8").style.display = "flex";
       }
       function myFunction9() {
         document.getElementById("page8").style.display = "none";
-        document.getElementById("page4").style.display = "block";
+        document.getElementById("page4").style.display = "flex";
         flag=0;
       }
 

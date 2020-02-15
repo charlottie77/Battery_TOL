@@ -16,6 +16,10 @@ body {
     align-items: center;
 }
 
+.p1-2 {
+  margin-top: 8px;
+}
+
 .p1-3 {
     margin-top: 90px;
 }
@@ -67,28 +71,91 @@ body {
     display:none;
   }
 
+  #page5 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+  }
+
+  .p5-1{
+    display: flex;
+
+  }
+
+  .p51-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .p51-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30px;
+  }
+
+  .p51-2 p {
+    width: 360px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+
+  #page4 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+  }
+
+  #page3, #page31 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12%;
+  }
+
+  .p3-1, .p31-1 {
+    display: flex;
+  }
+
+  .pp31-1, .p311-1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    padding-top: 72px;
+  }
+
+  .p3a-t-1, .p3b-t-1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+
+  .p3a-t-2, .p3b-t-2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+    color: #FFFFFF;
+  }
+
   .youtubeposition {
       overflow: hidden;
-      position: absolute;
-      left:10%;
-      top:5%;
       width:80%;
+      display: flex;
+      justify-content: center;
   }
 
   .youtubeposition::after {
-      padding-top: 56.25%;
-      display: block;
       content: '';
   }
-
-  .youtubeposition iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-  }
-
 
 
   .text1 {
@@ -120,10 +187,21 @@ body {
     font-weight: bold;
     font-size: 48px;
     line-height: 59px;
+    margin-bottom: 72px;
     /* identical to box height */
-
     text-align: center;
+    color: #FFFFFF;
+  }
 
+  .text4a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 8px;
+    /* identical to box height */
+    text-align: center;
     color: #FFFFFF;
   }
   .text5 {
@@ -133,7 +211,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    margin-bottom: 14px;
+    margin-bottom: 24px;
   }
   .text6 {
     font-family: Montserrat;
@@ -190,46 +268,14 @@ body {
     box-sizing: border-box;
   }
 
-  .img1 {
-    /* Vector */
-
-  }
-  .img2 {
-
-  }
-  .img3 {
-
-  }
-  .img4 {
-
-  }
+  
   .img5 {
     /* Vector */
     height: 38px;
     width: 38px;
     display:none;
   }
-  .img6 {
-    /* Vector */
-
-  }
-  .img7 {
-    /* Group 2 */
-
-  }
-  .img8 {
-    /* Group 2 */
-
-  }
-  .img9 {
-    /* Group 2 */
-
-  }
-  .img10 {
-    /* Group 2 */
-
-  }
-
+ 
   .button1 {
     /* Group 6 */
     width: 166px;
@@ -269,18 +315,46 @@ body {
 
   .button3 {
     /* Group 6 */
-
+    margin-top: 50px;
     background: #FFC107;
     border-radius: 8px;
+    padding: 4px 40px 4px 40px;
+    border-width: 0;
   }
   .button4 {
     /* Group 6 */
-
+    margin-top: 50px;
     background: #FFC107;
     border-radius: 8px;
+    padding: 4px 40px 4px 40px;
+    border-width: 0;
     display:none;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
   }
 
+  .button-clean{
+    border: 2px solid #fff;
+    background-color:  transparent;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 191px;
+    height: 45px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 20px 0px 0px 50px;
+  }
   .rectangle1 {
     /* Rectangle 2 */
     width: 263px;
@@ -302,22 +376,66 @@ body {
 
   .diagram {
     /* Group 8 */
-    position: absolute;
+    background-image: url("../assets/dragdrop.png");
+    background-repeat: no-repeat;
+    background-size: 457px 371.5px;
     width: 457px;
     height: 371.5px;
-    left: 242px;
-    top: 309px;
+    margin-top: 72px;
+  }
+
+  #dragdrop{
+    position: relative;
   }
 
   #div1 {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
+    position: absolute;
+    left: 180px;
+    top: -25px;
+    width: 140px;
+    height: 40px;
+    background: #E6E6E6;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
   }
   #div2 {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    top: 150px;
+    left: -60px;
+    background: #E6E6E6;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+
+  #div1 img,
+  #div2 img{
+    height: 40px;
+  }
+
+
+  .img7 img, 
+  .img8 img{
+    width: 140px;
+  }
+
+  .img9 img{
+    width: 160px;
+  }
+
+  .img10 img{
+    width: 120px;
+  }
+
+  #page61, #page62, #page63 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+  }
+
+  #page7{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
   }
