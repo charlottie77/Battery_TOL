@@ -82,14 +82,88 @@
       <div class="text4">What is moving in the Li-ion battery & wire?</div>
       <div class="text5">Please drag the items into the two blank slots in the left:</div>
       <div class="diagram"><img src="assets/dragdrop.png"></div>
-      <div id="div1" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <div id="div2" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id="dragdrop">
+        <div id="div1" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div2" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
       <div class="img7"><img src="assets/curr.png" draggable="true" ondragstart="drag(event)" id="drag1"></div>
       <div class="img8"><img src="assets/elec.png" draggable = "true" ondragstart="drag(event)" id="drag2"></div>
-      <button class="button2" id="button5" onclick="myFunction5()"><div class="text6" id="text12">Done</div></button>
+      <div class="img9"><img src="assets/lith.png" draggable = "true" ondragstart="drag(event)" id="drag3"></div>
+      <div class="img10"><img src="assets/water.png" draggable = "true" ondragstart="drag(event)" id="drag4"></div>
+      <!-- yuqing edit the class of clean slots button -->
+      <button class="button2" id="button6" onclick="myFunction6()"><div class="text6">Clean Slots</div></button><br>
+      <div id="buttonreset">
+        <button class="button2" id="button5" onclick="myFunction5()"><div class="text6" id="text12">Done</div></button>
+      </div>
+    </div>
+    <div id="page6">
+      <div class="text4">Correct</div>
+      <div class="text5">Please drag the items into the two blank slots in the left:</div>
+      <div class="diagram"><img src="assets/Correct.png"></div>
+      <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page61">
+      <div class="text4">Not quite right</div>
+      <div class="text5">Please drag the items into the two blank slots in the left:</div>
+      <div class="diagram"><img src="assets/Liright.png"></div>
+      <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page62">
+      <div class="text4">Not quite right</div>
+      <div class="text5">Please drag the items into the two blank slots in the left:</div>
+      <div class="diagram"><img src="assets/Eright.png"></div>
+      <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page63">
+      <div class="text4">Incorrect</div>
+      <div class="text5">Please drag the items into the two blank slots in the left:</div>
+      <div class="diagram"><img src="assets/wrong.png"></div>
+      <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page7">
+      <div class="text4">What’s the ideal condition for keeping the battery?</div><br>
+      <img id="background" src="assets/white.png">
+      <img src="assets/ccool.png">
+      <img src="assets/chot.png">
+      <img src="assets/ccold.png">
+      <img id="face" src="assets/noface.png"><br>
+      <div class="slidecontainer">
+        <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+        <span id="showvalue"></span>
+      </div>
+      <textarea id="hypothesis" rows="20" cols="200"></textarea>
+      <button class="button2" id="button7" onclick="myFunction8()"><div class="text6" id="text13">Submit</div></button>
+    </div>
+    <div id="page8">
+      <div class="text4">Let’s see the video to know whether you were correct or not.</div>
+      <button class="button3" onclick="myFunction9()"><div class="text12">Next</div></button>
+    </div>
+    <div id="page9">
+      <div class="text4">Congratulations!</div>
     </div>
     <script>
-      var flag = 1;
+      var flag = 1, html1, html2, counter=0;
+      var slider = document.getElementById("myRange");
+      var texta = document.getElementById("hypothesis");
+      var output = document.getElementById("showvalue");
+      output.innerHTML = slider.value;
+      texta.oninput = function()
+      {
+        document.getElementById('button7').style.backgroundColor = "#FFC107";
+        document.getElementById('text13').style.color = "#FFFFFF";
+        document.getElementById("button7").disabled = false;
+      }
+      slider.oninput = function()
+      {
+        output.innerHTML = this.value;
+        if (this.value < 40 || this.value > 99 || document.getElementById("background").src == "assets/hot.png" || document.getElementById("background").src == "assets/cold.png")
+        {
+          document.getElementById("face").src = "assets/sad.png";
+        }
+        else {
+          document.getElementById("face").src = "assets/happy.png";
+        }
+      }
       function myFunction1() {
         document.getElementById("page1").style.display = "none";
         document.getElementById("page2").style.display = "flex";
@@ -98,7 +172,7 @@
       function myFunction2() {
         document.getElementById("page2").style.display = "none";
         var radios = document.getElementsByName('material');
-        if (radios[0].checked) {
+        if (radios[2].checked) {
           document.getElementById("page3").style.display = "block";
         }
         else {
@@ -114,41 +188,91 @@
       }
       function myFunction4() {
         document.getElementById("page4").style.display = "none";
-        document.getElementById("page5").style.display = "block";
-        document.getElementById("button5").disabled = true;
-        document.getElementById("button4").style.display = "none";
+        if(counter==0)
+        {
+          document.getElementById("page5").style.display = "block";
+          document.getElementById("button5").disabled = true;
+          document.getElementById("button4").style.display = "none";
+          html1 = document.getElementById('dragdrop').innerHTML;
+          html2 = document.getElementById('buttonreset').innerHTML;
+        }
+        else if(counter==1)
+        {
+          document.getElementById("page7").style.display = "block";
+          document.getElementById("button7").disabled = true;
+          document.getElementById("button4").style.display = "none";
+        }
+        else {
+          document.getElementById("page9").style.display = "block";
+        }
+        counter=counter+1;
       }
       function myFunction5() {
         document.getElementById("page5").style.display = "none";
+        if (document.getElementById("div1").childNodes[0].getAttribute("src")=="assets/elec.png" && document.getElementById("div2").childNodes[0].getAttribute("src")=="assets/lith.png")
+        {
+          document.getElementById("page6").style.display = "block";
+        }
+        else if (document.getElementById("div2").childNodes[0].getAttribute("src")=="assets/lith.png")
+        {
+          document.getElementById("page61").style.display = "block";
+        }
+        else if (document.getElementById("div1").childNodes[0].getAttribute("src")=="assets/elec.png")
+        {
+          document.getElementById("page62").style.display = "block";
+        }
+        else {
+          document.getElementById("page63").style.display = "block";
+        }
+      }
+      function myFunction6() {
+        var container1 = document.getElementById("dragdrop");
+        container1.innerHTML= html1;
+        var container2 = document.getElementById("buttonreset");
+        container2.innerHTML= html2;
+      }
+      function myFunction7() {
+        document.getElementById("page6").style.display = "none";
+        document.getElementById("page61").style.display = "none";
+        document.getElementById("page62").style.display = "none";
+        document.getElementById("page63").style.display = "none";
+        document.getElementById("page4").style.display = "block";
+        flag=0;
+      }
+      function myFunction8() {
+        document.getElementById("page7").style.display = "none";
+        document.getElementById("page8").style.display = "block";
+      }
+      function myFunction9() {
+        document.getElementById("page8").style.display = "none";
         document.getElementById("page4").style.display = "block";
         flag=0;
       }
 
-
       function radio1() {
         document.getElementById("img5").style.display = "flex";
-        document.getElementById("img5").innerHTML = "<img src='assets/Current.png'>";
+        document.getElementById("img5").src = "assets/Current.png";
         document.getElementById('button2').style.backgroundColor = "#FFC107";
         document.getElementById('button2').style.color = "#FFFFFF";
         document.getElementById("button2").disabled = false;
       }
       function radio2() {
         document.getElementById("img5").style.display = "flex";
-        document.getElementById("img5").innerHTML = "<img src='assets/Metal.png'>";
+        document.getElementById("img5").src = "assets/Metal.png";
         document.getElementById('button2').style.backgroundColor = "#FFC107";
         document.getElementById('button2').style.color = "#FFFFFF";
         document.getElementById("button2").disabled = false;
       }
       function radio3() {
         document.getElementById("img5").style.display = "flex";
-        document.getElementById("img5").innerHTML = "<img src='assets/Chemical Solution.png'>";
+        document.getElementById("img5").src = "assets/Chemical Solution.png";
         document.getElementById('button2').style.backgroundColor = "#FFC107";
         document.getElementById('button2').style.color = "#FFFFFF";
         document.getElementById("button2").disabled = false;
       }
       function radio4() {
         document.getElementById("img5").style.display = "flex";
-        document.getElementById("img5").innerHTML = "<img src='assets/Cotton.png'>";
+        document.getElementById("img5").src = "assets/Cotton.png";
         document.getElementById('button2').style.backgroundColor = "#FFC107";
         document.getElementById('button2').style.color = "#FFFFFF";
         document.getElementById("button2").disabled = false;
@@ -190,7 +314,8 @@
       // 2. This code loads the IFrame Player API code asynchronously.
       var videoIDs = [
         'lil-Xqhugx8',
-        'uFLvcRcBy30'
+        'uFLvcRcBy30',
+        'quHqanLz7IQ'
     ];
       var tag = document.createElement('script');
 
@@ -233,6 +358,9 @@
           if (currentVideoId==2) {
             document.getElementById("button4").style.display = "block";
           }
+          if (currentVideoId==3) {
+            document.getElementById("button4").style.display = "block";
+          }
           if (event.data == YT.PlayerState.ENDED ) {
             // currentVideoId++;
             // if (currentVideoId < videoIDs.length) {
@@ -250,7 +378,7 @@
               currentVideoId++;
               flag=1;
           }
-      }, 1000);
+      }, 100);
     </script>
  </body>
 </html>

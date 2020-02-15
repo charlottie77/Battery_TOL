@@ -63,7 +63,7 @@ body {
   width: auto;
 }
 
-  #page2, #page3, #page31, #page4, #page5, #page6 {
+  #page2, #page3, #page31, #page4, #page5, #page6, #page61, #page62, #page63, #page7, #page8, #page9 {
     display:none;
   }
 
@@ -89,7 +89,7 @@ body {
       height: 100%;
   }
 
-  
+
 
   .text1 {
     font-family: Montserrat;
@@ -145,7 +145,7 @@ body {
     text-align: center;
     color: #BDBDBD;
   }
-  
+
   .text11 {
     /* Battery */
     font-family: Montserrat;
@@ -192,16 +192,16 @@ body {
 
   .img1 {
     /* Vector */
-    
+
   }
   .img2 {
-    
+
   }
   .img3 {
-    
+
   }
   .img4 {
-    
+
   }
   .img5 {
     /* Vector */
@@ -211,15 +211,23 @@ body {
   }
   .img6 {
     /* Vector */
-   
+
   }
   .img7 {
     /* Group 2 */
-    
+
   }
   .img8 {
     /* Group 2 */
-    
+
+  }
+  .img9 {
+    /* Group 2 */
+
+  }
+  .img10 {
+    /* Group 2 */
+
   }
 
   .button1 {
@@ -245,7 +253,7 @@ body {
 
   .button2 {
     /* Group 6 */
-    
+
     background: #636363;
     border-radius: 8px;
     padding: 4px 40px 4px 40px;
@@ -261,13 +269,13 @@ body {
 
   .button3 {
     /* Group 6 */
-    
+
     background: #FFC107;
     border-radius: 8px;
   }
   .button4 {
     /* Group 6 */
-    
+
     background: #FFC107;
     border-radius: 8px;
     display:none;
