@@ -141,18 +141,39 @@
       <button class="button3" onclick="myFunction7()"><div class="text12">Next</div></button>
     </div>
     <div id="page7">
-      <div class="text4">What’s the ideal condition for keeping the battery?</div><br>
-      <img id="background" src="assets/white.png">
-      <img src="assets/ccool.png">
-      <img src="assets/chot.png">
-      <img src="assets/ccold.png">
-      <img id="face" src="assets/noface.png"><br>
-      <div class="slidecontainer">
-        <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
-        <span id="showvalue"></span>
+      <div class="text4 p7-title">What’s the ideal condition for keeping the battery?</div>
+      <div class="p7-con1"> 
+        <div class="p7-1">
+          <div class="p71-1">
+            <p>1. Which temperature is suitable for battery?</p>
+          </div>
+          <img id="p7-background">
+          <div class="p71-2">
+            <div class="p712-i" id="cool" onclick="p7_choose(event)">
+              <img src="assets/icool.png">
+            </div>
+            <div class="p712-i" id="hot" onclick="p7_choose(event)">
+              <img src="assets/fire.png">
+            </div>
+            <div class="p712-i" id="cold" onclick="p7_choose(event)">
+              <img src="assets/snow.png">
+            </div>
+          </div>
+          <img id="face" src="assets/noface.png"><br>
+        </div>
+        <div class="p7-2">
+          <p>2. After how much discharge should you plug your charger again?</p>
+          <div class="slidecontainer">
+            <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+            <span id="showvalue"></span><span>%</span>
+          </div>
+        </div>
+        <div class="p7-3">
+          <p>3. From exploring the temperature and battery level, write down the ideal conditions for charging a battery if you want to use it for long time?</p>
+          <textarea id="hypothesis" name="textarea">Write something here</textarea>
+        </div>
       </div>
-      <textarea id="hypothesis" rows="20" cols="200"></textarea>
-      <button class="button2" id="button7" onclick="myFunction8()"><div class="text6" id="text13">Submit</div></button>
+      <button class="button2" id="button7" onclick="myFunction8()">Submit</button>
     </div>
     <div id="page8">
       <div class="text4">Let’s see the video to know whether you were correct or not.</div>
@@ -169,21 +190,30 @@
       output.innerHTML = slider.value;
       texta.oninput = function()
       {
+        console.log("dddd");
         document.getElementById('button7').style.backgroundColor = "#FFC107";
-        document.getElementById('text13').style.color = "#FFFFFF";
+        document.getElementById('button7').style.color = "#FFFFFF";
         document.getElementById("button7").disabled = false;
       }
+
+      //slider
       slider.oninput = function()
       {
         output.innerHTML = this.value;
-        if (this.value < 40 || this.value > 99 || document.getElementById("background").src == "assets/hot.png" || document.getElementById("background").src == "assets/cold.png")
+        if (this.value < 40 || this.value > 99 )
         {
           document.getElementById("face").src = "assets/sad.png";
         }
         else {
-          document.getElementById("face").src = "assets/happy.png";
+          var temperature_is_bad = document.getElementById("p7-background").style.backgroundImage == 'url("assets/hot.png")' || 
+          document.getElementById("p7-background").style.backgroundImage == 'url("assets/cold.png")'
+          console.log(temperature_is_bad);
+          if(!temperature_is_bad){
+            document.getElementById("face").src = "assets/happy.png";}
         }
       }
+
+      //page action
       function myFunction1() {
         document.getElementById("page1").style.display = "none";
         document.getElementById("page2").style.display = "flex";
@@ -267,6 +297,36 @@
         document.getElementById("page8").style.display = "none";
         document.getElementById("page4").style.display = "flex";
         flag=0;
+      }
+
+      function p7_choose(event) {
+        //clean
+        document.getElementById("cool").style.border = "none";
+        document.getElementById("hot").style.border = "none";
+        document.getElementById("cold").style.border = "none";
+
+        //change border
+        let _target = event.target.id;
+        console.log(_target);
+        document.getElementById(_target.toString()).style.border = "6px solid #66ECCC"
+
+        
+        //change background
+        if (_target == "cool")
+        {
+          document.getElementById("p7-background").style.backgroundImage = "url('assets/cool.png')";
+          document.getElementById("face").src = "assets/happy.png";
+        }else
+        if (_target == "cold")
+        {
+          document.getElementById("p7-background").style.backgroundImage = "url('assets/cold.png')";
+          document.getElementById("face").src = "assets/sad.png";
+        }else
+        if(_target == "hot")
+        {
+          document.getElementById("p7-background").style.backgroundImage = "url('assets/hot.png')";
+          document.getElementById("face").src = "assets/sad.png";
+        }
       }
 
       function radio1() {
