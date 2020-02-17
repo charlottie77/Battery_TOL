@@ -289,14 +289,21 @@
         if (radios[2].checked) {
           document.getElementById("page3").style.display = "flex";
         }
-        else {
-          //we can later make it personalized for each response
+        else if (radios[0].checked) {
           document.getElementById("page31").style.display = "flex";
+        }
+        else if (radios[1].checked) {
+          document.getElementById("page32").style.display = "flex";
+        }
+        else {
+          document.getElementById("page33").style.display = "flex";
         }
       }
       function myFunction3() {
         document.getElementById("page3").style.display = "none";
         document.getElementById("page31").style.display = "none";
+        document.getElementById("page32").style.display = "none";
+        document.getElementById("page33").style.display = "none";
         document.getElementById("page4").style.display = "flex";
         flag=0;
       }

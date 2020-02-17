@@ -110,7 +110,7 @@ body {
     margin-top: 8%;
   }
 
-  #page3, #page31 {
+  #page3, #page31, #page32, #page33 {
     flex-direction: column;
     align-items: center;
     margin-top: 12%;
