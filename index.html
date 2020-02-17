@@ -148,7 +148,7 @@
     </div>
     <div id="page7">
       <div class="text4 p7-title">What’s the ideal condition for keeping the battery?</div>
-      <div class="p7-con1"> 
+      <div class="p7-con1">
         <div class="p7-1">
           <div class="p71-1">
             <p>1. Which temperature is suitable for battery?</p>
@@ -156,13 +156,13 @@
           <img id="p7-background">
           <div class="p71-2">
             <div class="p712-i" id="cool" onclick="p7_choose(event)">
-              <img src="assets/icool.png">
+              <img src="assets/icool.png" id="cool1" onclick="p7_choose(event)">
             </div>
             <div class="p712-i" id="hot" onclick="p7_choose(event)">
-              <img src="assets/fire.png">
+              <img src="assets/fire.png" id="hot1" onclick="p7_choose(event)">
             </div>
             <div class="p712-i" id="cold" onclick="p7_choose(event)">
-              <img src="assets/snow.png">
+              <img src="assets/snow.png" id="cold1" onclick="p7_choose(event)">
             </div>
           </div>
           <img id="face" src="assets/noface.png"><br>
@@ -176,7 +176,7 @@
         </div>
         <div class="p7-3">
           <p>3. From exploring the temperature and battery level, write down the ideal conditions for charging a battery if you want to use it for long time?</p>
-          <textarea id="hypothesis" name="textarea">Write something here</textarea>
+          <textarea id="hypothesis" name="textarea" placeholder="Write down your reflection"></textarea>
         </div>
       </div>
       <button class="button2" id="button7" onclick="myFunction8()">Submit</button>
@@ -219,7 +219,7 @@
           document.getElementById("face").src = "assets/sad.png";
         }
         else {
-          var temperature_is_bad = document.getElementById("p7-background").style.backgroundImage == 'url("assets/hot.png")' || 
+          var temperature_is_bad = document.getElementById("p7-background").style.backgroundImage == 'url("assets/hot.png")' ||
           document.getElementById("p7-background").style.backgroundImage == 'url("assets/cold.png")'
           console.log(temperature_is_bad);
           if(!temperature_is_bad){
@@ -325,22 +325,23 @@
         //change border
         let _target = event.target.id;
         console.log(_target);
-        document.getElementById(_target.toString()).style.border = "6px solid #66ECCC"
 
-        
         //change background
-        if (_target == "cool")
+        if (_target == "cool" || _target == "cool1")
         {
+          document.getElementById("cool").style.border = "6px solid #66ECCC";
           document.getElementById("p7-background").style.backgroundImage = "url('assets/cool.png')";
           document.getElementById("face").src = "assets/happy.png";
         }else
-        if (_target == "cold")
+        if (_target == "cold" || _target == "cold1")
         {
+          document.getElementById("cold").style.border = "6px solid #66ECCC";
           document.getElementById("p7-background").style.backgroundImage = "url('assets/cold.png')";
           document.getElementById("face").src = "assets/sad.png";
         }else
-        if(_target == "hot")
+        if(_target == "hot" || _target == "hot1")
         {
+          document.getElementById("hot").style.border = "6px solid #66ECCC";
           document.getElementById("p7-background").style.backgroundImage = "url('assets/hot.png')";
           document.getElementById("face").src = "assets/sad.png";
         }
