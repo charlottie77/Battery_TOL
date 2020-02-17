@@ -120,6 +120,11 @@ body {
     display: flex;
   }
 
+  .p31-1{
+    flex-direction: row;
+    width: 70%;
+  }
+
   .pp31-1, .p311-1 {
     display: flex;
     flex-direction: column;
@@ -131,17 +136,22 @@ body {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 22px;
     line-height: 41px;
     color: #FFFFFF;
     margin-bottom: 30px;
+  }
+
+  .p3a-t-1 span,
+  .p3b-t-1 span {
+    color: #FFC107;
   }
 
   .p3a-t-2, .p3b-t-2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 34px;
+    font-size: 22px;
     line-height: 41px;
     color: #FFFFFF;
   }
@@ -357,7 +367,8 @@ body {
   }
   .rectangle1 {
     /* Rectangle 2 */
-    width: 263px;
+    min-width: 263px;
+    max-width: 263px;
     height: 338px;
     background: #4E53C2;
     display: flex;
@@ -602,4 +613,21 @@ body {
 
   .p1-4 img {
     margin: 8px 0px 8px 0px;
+  }
+
+  .p6-feedback-t {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 41px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+
+  .p6-i {
+    display: flex;
+    width: 80%;
+    align-items: center;
+
   }
