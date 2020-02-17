@@ -223,14 +223,14 @@
           </div>
         </div>
         <div class="p7-3">
-          <p>3. From exploring the temperature and battery level, write down the ideal conditions for charging a battery if you want to use it for long time?</p>
+          <p>3. From exploring the temperature and battery level, describe the ideal conditions for temperaturea and the battery level when you should charge a battery based on your exploration above?</p>
           <textarea id="hypothesis" name="textarea" placeholder="Write down your reflection"></textarea>
         </div>
       </div>
       <button class="button2" id="button7" onclick="myFunction8()">Submit</button>
     </div>
     <div id="page8">
-      <div class="text4">Let’s see the video to know whether you were correct or not.</div>
+      <div class="text5">The weather should be cool because the hot and cold weather hurts the battery. Also, you should ideally charge your battery when it is somewhere from 40 to 80% otherwise the number of cycles will be less than what you can get in ideal conditions. If this seems confusing to you don't worry, click next to watch the video.</div>
       <button class="button3" onclick="myFunction9()"><div class="text12">Next</div></button>
     </div>
     <div id="page9">
@@ -262,7 +262,7 @@
       slider.oninput = function()
       {
         output.innerHTML = this.value;
-        if (this.value < 40 || this.value > 99 )
+        if (this.value < 40 || this.value > 80 )
         {
           document.getElementById("face").src = "assets/sad.png";
         }
