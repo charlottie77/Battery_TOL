@@ -570,6 +570,11 @@ body {
     margin-top: 20%;
   }
 
+  #page8 .text5 {
+    width: 60%;
+    line-height: 32px;
+  }
+
   #page9 {
     flex-direction: column;
     align-items: center;
@@ -630,4 +635,24 @@ body {
     width: 80%;
     align-items: center;
 
+  }
+
+  .inline-blue {
+    color: #9BFCFF;
+    font-weight: bold;
+  }
+
+  .inline-orange {
+    color: #FFC107;
+    font-weight: bold;
+  }
+
+  .inline-red {
+    color: #ED405F;
+    font-weight: bold;
+  }
+
+  .inline-mint {
+    color: #66ECCC;
+    font-weight: bold;
   }
