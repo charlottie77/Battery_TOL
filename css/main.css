@@ -67,7 +67,7 @@ body {
   width: auto;
 }
 
-  #page2, #page3, #page31, #page4, #page5, #page6, #page61, #page62, #page63, #page7, #page8, #page9 {
+  #page2, #page3, #page31, #page4, #page5, #page6, #page61, #page62, #page63, #page7, #page8, #page9, #page32, #page33 {
     display:none;
   }
 
@@ -268,14 +268,14 @@ body {
     box-sizing: border-box;
   }
 
-  
+
   .img5 {
     /* Vector */
     height: 38px;
     width: 38px;
     display:none;
   }
- 
+
   .button1 {
     /* Group 6 */
     width: 166px;
@@ -415,7 +415,7 @@ body {
   }
 
 
-  .img7 img, 
+  .img7 img,
   .img8 img{
     width: 140px;
   }
@@ -448,7 +448,7 @@ body {
 
   .p7-1 {
     position: relative;
-    
+
   }
 
   .p71-2 {
@@ -490,7 +490,7 @@ body {
     padding: 8px 0px 12px 8px;
   }
 
-  
+
 
   #page7 .button2 {
     margin-top: 14px;
@@ -537,7 +537,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 18px;
-    
+
   }
 
   .p712-i img {
@@ -603,5 +603,3 @@ body {
   .p1-4 img {
     margin: 8px 0px 8px 0px;
   }
-
-  
