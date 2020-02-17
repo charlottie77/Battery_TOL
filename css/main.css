@@ -3,6 +3,17 @@ body {
     height: 100%;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/montserrat/Montserrat-Regular.otf);
+}
+
+@font-face {
+  font-family: Montserrat-bold;
+  src: url(../assets/montserrat/Montserrat-Bold.otf);
+}
+
+
 #page1 {
     display:flex;
     flex-direction: column;
@@ -133,7 +144,7 @@ body {
   }
 
   .p3a-t-1, .p3b-t-1{
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -179,7 +190,7 @@ body {
   }
   .text2 {
     /* Phone Battery */
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -192,7 +203,7 @@ body {
   }
   .text4 {
     /* What do you think the battery is made of? */
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -204,7 +215,7 @@ body {
   }
 
   .text4a {
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
@@ -247,7 +258,7 @@ body {
   }
   .text12 {
     /* Next */
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -314,7 +325,7 @@ body {
     border-radius: 8px;
     padding: 4px 40px 4px 40px;
     border-width: 0;
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -340,7 +351,7 @@ body {
     border-width: 0;
     display:none;
 
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -507,7 +518,7 @@ body {
     margin-top: 14px;
     background: #636363;
     border-radius: 8px;
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -587,7 +598,7 @@ body {
   }
 
   #page9 .button3{
-    font-family: Montserrat;
+    font-family: Montserrat-bold;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
