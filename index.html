@@ -12,6 +12,12 @@
       <div class="p1-3">
         <button class="button1" onclick="myFunction1()">START</button>
       </div>
+      <div class="p1-4">
+        <p>TOL Project 1</p>
+        <p>Gautam Yadav, Xinying Hou, Yuqing Guo</p>
+        <img src="assets/Line1.png">
+        <p>How everyday object works?</p>
+      </div>
     </div>
 
     <div id="page2" class="show-p2">
@@ -181,6 +187,14 @@
     </div>
     <div id="page9">
       <div class="text4">Congratulations!</div>
+      <img class="p9-img" src="assets/cong.png">
+      <button class="button3" onclick="myFunction10()">Learn Again</button>
+      <div class="p1-4">
+        <p>TOL Project 1</p>
+        <p>Gautam Yadav, Xinying Hou, Yuqing Guo</p>
+        <img src="assets/Line1.png">
+        <p>How everyday object works?</p>
+      </div>
     </div>
     <script>
       var flag = 1, html1, html2, counter=0;
@@ -297,6 +311,9 @@
         document.getElementById("page8").style.display = "none";
         document.getElementById("page4").style.display = "flex";
         flag=0;
+      }
+      function myFunction10() {
+        location.reload();
       }
 
       function p7_choose(event) {
